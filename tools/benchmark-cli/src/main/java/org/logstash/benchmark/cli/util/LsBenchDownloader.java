@@ -21,7 +21,8 @@ public final class LsBenchDownloader {
     public static void downloadDecompress(final File file, final String url)
         throws IOException, NoSuchAlgorithmException {
         if (file.exists()) {
-            LsBenchFileUtil.ensureDeleted(file);
+            System.out.println("Exists and unzipping");
+            LsBenchCompressUtil.unzipDir(temp.getAbsolutePath(), file);
         }
         if (!file.exists()) {
             final File temp = file.getParentFile().toPath().resolve(
