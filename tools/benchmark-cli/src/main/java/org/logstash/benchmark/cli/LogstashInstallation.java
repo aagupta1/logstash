@@ -82,8 +82,12 @@ public interface LogstashInstallation {
             base.execute(configuration, data, repeat);
         }
 
+
+
+
         @Override
         public String metrics() {
+            String str =
             return base.metrics();
         }
 
